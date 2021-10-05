@@ -50,5 +50,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // local server
+  server: {
+    host: '0' // デフォルト: localhost
   }
 }
