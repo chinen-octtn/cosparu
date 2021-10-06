@@ -12,7 +12,13 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        href: '/assets/css/reset.css',
+        as: 'style',
+      },
+      { rel: 'stylesheet', href: '/assets/css/reset.css' },
     ]
   },
 
