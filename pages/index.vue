@@ -1,5 +1,8 @@
 <template>
-  <PageTitle title="Cosparu：コスパ計算" />
+  <div>
+    <PageTitle title="Cosparu：コスパ計算" />
+    <Input />
+  </div>
 </template>
 
 <script lang="ts">
