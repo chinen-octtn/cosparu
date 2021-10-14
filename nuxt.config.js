@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  htmlAttrs: {
+    lang: 'ja'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Cosparu：コスパ計算',
