@@ -1,23 +1,28 @@
 # cosparu
 コスパ計算用のアプリを作ります。
 
-
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
-
 ## Setup
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-Make sure to install the dependencies
+Make sure to install the dependencies:
 
 ```bash
-npm ci
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install --shamefully-hoist
 ```
 
-## Development
+## Development Server
 
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev -- -o
+npm run dev
 ```
 
 ## Production
@@ -25,7 +30,13 @@ npm run dev -- -o
 Build the application for production:
 
 ```bash
-yarn build
+npm run build
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
