@@ -1,4 +1,13 @@
 <script setup lang="ts">
+const title = 'コスパ計算'
+const description = '量と金額を入力してどれがお得か計算します。'
+
+useHead({
+  meta: [{ name: 'description', content: description }],
+  // link: [{ rel: 'stylesheet', href: './style.css' }],
+  // script: [{ src: './script.js' }],
+})
+
 let count = ref<number>(2)
 let priceArray = ref<number[]>([])
 let amountArray = ref<number[]>([])
@@ -58,6 +67,7 @@ watch(count, () => {
 
 <template>
   <div>
+    <Title>{{ title }}</Title>
     <p v-if="costPosition() >= 0">{{ costPosition() + 1 }}がお得！！</p>
     <p v-else>金額と量を入力してください</p>
     <div class="list">
