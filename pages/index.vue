@@ -9,21 +9,18 @@ useHead({
 })
 
 let count = ref<number>(2)
+let beforeCount = ref<number>(2)
 let priceArray = ref<number[]>([])
 let amountArray = ref<number[]>([])
 let pricePerAmount = ref<number[]>([])
 
-const focus = (index) => {
-  const item = document.querySelectorAll('.item')
-  const last = count.value - 1
-  console.log(index)
-}
-
 const addElement = () => {
+  beforeCount.value = count.value
   count.value++
 }
 
 const removeElement = (index) => {
+  beforeCount.value = count.value
   count.value -= 1
   priceArray.value.splice(index, 1)
   amountArray.value.splice(index, 1)
@@ -36,6 +33,19 @@ const resetElement = () => {
   amountArray.value = []
   pricePerAmount.value = []
 }
+
+onMounted(() => {
+  const item = document.querySelector('.item')
+  item.querySelector('input').focus()
+})
+
+onUpdated(() => {
+  if (beforeCount.value < count.value) {
+    const item = document.querySelectorAll('.item')
+    const last = item.length - 1
+    item[last].querySelector('input').focus()
+  }
+})
 
 const getUnitPrice = (index) => {
   const price = priceArray.value[index]
@@ -58,11 +68,6 @@ const costPosition = () => {
   const minValue = Math.min(...price)
   return price.indexOf(minValue)
 }
-
-watch(count, () => {
-  focus(count.value)
-  console.log('watch' + count.value)
-})
 </script>
 
 <template>
@@ -72,7 +77,6 @@ watch(count, () => {
     <p v-else>金額と量を入力してください</p>
     <div class="list">
       <div
-        ref="itemValue"
         class="item"
         :class="{ isActive: costPosition() === index }"
         v-for="(item, index) in count"
