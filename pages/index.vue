@@ -32,6 +32,9 @@ const resetElement = () => {
   priceArray.value = []
   amountArray.value = []
   pricePerAmount.value = []
+
+  const button: HTMLButtonElement = document.querySelector('#js-add')
+  button.click()
 }
 
 onMounted(() => {
@@ -98,7 +101,8 @@ const costPosition = () => {
       </div>
     </div>
 
-    <ButtonAdd @click="addElement" />
+    <ButtonAdd id="js-add" @click="addElement" />
+
     <ButtonReset @click="resetElement" />
   </div>
 </template>
