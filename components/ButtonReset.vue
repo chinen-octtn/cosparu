@@ -2,7 +2,7 @@
 
 <template>
   <Button
-    class="text-m rounded-full p-2 grid justify-center content-center bg-gray-800 text-white"
+    class="text-sm rounded-full py-1 px-2 grid justify-center content-center bg-slate-400 text-white"
     text="リセット"
   />
 </template>

@@ -1,18 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Button text="+" />
+  <Button
+    class="bg-[#cbd214] w-10 h-10 text-3xl rounded-full shadow-2xl"
+    text="+"
+  />
 </template>
 
-<style scoped>
-button {
-  font-size: 1.5rem;
-  /* font-family: inherit; */
-  font-weight: normal;
-  background: #cbd214;
-  border-radius: 50%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  border: none;
-  appearance: none;
-}
-</style>
+<style scoped></style>

@@ -2,7 +2,7 @@
 
 <template>
   <Button
-    class="text-xl rounded-full w-5 h-5 grid justify-center content-center bg-gray-800 text-white"
+    class="text-sm rounded-full w-6 h-6 grid justify-center content-center bg-gray-600 text-white"
     text="-"
   />
 </template>
